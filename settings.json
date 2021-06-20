@@ -1,0 +1,16 @@
+{
+    "botName": "DevApps",
+    "botToken": "ODU2MDMzNjM3ODAyNTczODI1.YM7Jcw.llUT8Won7Art7K5yN5a5Hmdka-k",
+    "commandPrefix": "!",
+    "counterGame": {
+        "enabled": true,
+        "channelID": "856034525804232724",
+        "ignoreMessageIDs": [],
+        "resetMessage": "Uh oh, looks like we got messed up! Now we have to start all over...",
+        "victoryMessage": "Victory!!!",
+        "onVicotry": "endGame",
+        "progress": 0,
+        "goal": 5
+    }
+}
+
