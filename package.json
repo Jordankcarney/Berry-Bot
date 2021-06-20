@@ -1,0 +1,14 @@
+{
+  "name": "berry-bot",
+  "version": "1.0.0",
+  "description": "Discord bot for the WorldPainter server. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kensu",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
