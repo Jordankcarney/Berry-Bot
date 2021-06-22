@@ -1,10 +1,17 @@
 const Settings = require('../settings.json');
 
-
 // Message Listener Event Loops
 function counterGame(client, message) {
 
     function fail() {
+
+        // If delete setting enabled, deletes up to 100 messages at a time
+        if(Settings.counterGame.deleteMessages === true) {
+            for(let i = Math.ceil(Settings.counterGame.progress / 100); i >= 0; i--) {
+                message.channel.bulkDelete(100);
+            }
+         }
+
         message.channel.send(Settings.counterGame.resetMessage);
         Settings.counterGame.progress = 0;
     }    
@@ -62,6 +69,9 @@ function counterGame(client, message) {
                             
                         }
                     }
+
+                    // Set bot activity to current count to easily keep track of it.
+                    client.user.setActivity(Settings.counterGame.progress.toString());
 
                     if(Settings.counterGame.progress === Settings.counterGame.goal) {
                         victory();
